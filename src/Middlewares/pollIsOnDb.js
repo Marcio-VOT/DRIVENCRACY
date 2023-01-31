@@ -5,7 +5,6 @@ export async function pollIsOnDb(req, res, next) {
   if (!id) {
     id = req.body.pollId;
   }
-  // if(isValid(id : ObjectId()))
   if (!ObjectId.isValid(id)) {
     return res.status(400).send("Id Não compatível com o esperado");
   }
