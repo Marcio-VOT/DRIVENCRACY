@@ -1,4 +1,4 @@
-import { choicePostSchema } from "../Model/choiceSchemas/choiceSchemas";
+import { choicePostSchema } from "../Model/choiceSchemas/choiceSchemas.js";
 
 export async function choicePostValidation(req, res, next) {
   const { error } = choicePostSchema.validate(req.body);

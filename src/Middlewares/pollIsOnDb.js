@@ -1,5 +1,5 @@
 import { ObjectID } from "bson";
-import { pollCollection } from "../config/database";
+import { pollCollection } from "../config/database.js";
 export async function pollIsOnDb(req, res, next) {
   let id = req.params.id;
   if (!id) {

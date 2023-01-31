@@ -1,5 +1,5 @@
 import { ObjectID } from "bson";
-import { voteOptionCollection } from "../config/database";
+import { voteOptionCollection } from "../config/database.js";
 
 export async function dupChoice(req, res, next) {
   const { _id } = res.locals;

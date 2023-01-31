@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { pollCollection } from "../config/database";
+import { pollCollection } from "../config/database.js";
 
 export async function validPoll(req, res, next) {
   const { _id } = res.locals;

@@ -2,6 +2,7 @@ import { pollCollection } from "../../config/database.js";
 
 export default async (req, res) => {
   try {
+    console.log("babalu");
     const poll = pollCollection.find({}).toArray();
     res.send(poll);
   } catch (error) {
