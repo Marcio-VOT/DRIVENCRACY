@@ -12,6 +12,6 @@ const pollRouter = Router();
 pollRouter.post("/poll", pollPostValidation, pollPost);
 pollRouter.get("/poll", pollGet);
 pollRouter.get("/poll/:id/choice", pollIsOnDb, pollChoice);
-pollRouter.get("/pool/:id/result", pollIsOnDb, pollResult);
+pollRouter.get("/poll/:id/result", pollIsOnDb, pollResult);
 
 export default pollRouter;
