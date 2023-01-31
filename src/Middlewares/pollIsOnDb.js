@@ -5,6 +5,10 @@ export async function pollIsOnDb(req, res, next) {
   if (!id) {
     id = req.body.pollId;
   }
+  // if(isValid(id : ObjectId()))
+  if (!ObjectId.isValid(id)) {
+    return res.status(400).send("Id Não compatível com o esperado");
+  }
   const exist = await pollCollection.findOne({ _id: ObjectId(id) });
   if (!exist) return res.sendStatus(404);
   res.locals._id = ObjectId(id);
