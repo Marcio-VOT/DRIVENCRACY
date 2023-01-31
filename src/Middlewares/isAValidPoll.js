@@ -7,7 +7,7 @@ export async function validPoll(req, res, next) {
   const exist = await pollCollection.findOne({
     _id,
   });
-  if (exist.expireAt.isBefore(dayjs())) return res.sendStatus(403);
+  if (dayjs(exist.expireAt).isBefore(dayjs())) return res.sendStatus(403);
 
   next();
 }

@@ -1,5 +1,4 @@
 import Joi from "joi";
-import dayjs from "dayjs";
 
 export const pollPostSchema = Joi.object({
   title: Joi.string().required(),
