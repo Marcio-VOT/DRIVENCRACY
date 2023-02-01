@@ -10,7 +10,7 @@ try {
   await mongoClient.connect();
   db = mongoClient.db();
 } catch (error) {
-  console.log("Server connection error");
+  console.log(error, db);
 }
 
 export const pollCollection = db.collection("polls");
